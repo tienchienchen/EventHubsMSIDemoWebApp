@@ -1,0 +1,35 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.microsoft.azure</groupId>
+    <artifactId>azure-eventhubs-samples</artifactId>
+    <name>azure-eventhubs-samples</name>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <build>
+        <directory>${project.basedir}/target</directory>
+        <outputDirectory>${project.build.directory}/classes</outputDirectory>
+        <finalName>${project.artifactId}-${project.version}</finalName>
+        <testOutputDirectory>${project.build.directory}/classes</testOutputDirectory>
+        <sourceDirectory>${project.basedir}/src/</sourceDirectory>
+        <testSourceDirectory>${project.basedir}/test/</testSourceDirectory>
+    </build>
+
+    <modules>
+        <module>Basic/EventProcessorSample</module>
+        <module>Basic/ReceiveByDateTime</module>
+        <module>Basic/ReceiveUsingOffset</module>
+        <module>Basic/ReceiveUsingSequenceNumber</module>
+        <module>Basic/AdvancedSendOptions</module>
+        <module>Basic/SendBatch</module>
+        <module>Basic/SimpleSend</module>
+        <module>Benchmarks/AutoScaleOnIngress</module>
+        <module>Benchmarks/IngressBenchmark</module>
+    </modules>
+</project>
